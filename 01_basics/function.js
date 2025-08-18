@@ -41,3 +41,50 @@ function isLoggedIn(name="gautam"){
 
 console.log(isLoggedIn("sanu"));
 */
+
+/*
+
+when we want pass multiple values in argument = it return in array
+
+function CalculateCartPrice(...num1){
+    return num1
+}
+
+console.log(CalculateCartPrice(4,5,6,7))
+
+*/
+
+
+/*
+
+when we want add object in function 
+const user={
+    userName:"gautam",
+    Price:199
+}
+
+function returnObjectValue(anyObject){
+    console.log(`user name is ${anyObject.userName} and price is ${anyObject.Price}`)
+}
+
+// returnObjectValue(user)
+returnObjectValue({
+    userName:"gautam",
+    Price:199
+})
+
+*/
+
+/* 
+
+when we want add array in function
+
+
+const myArr=[100,50,150,40]
+
+function returnMyArr(getArray){
+    return getArray[1]
+}
+
+console.log(returnMyArr(myArr));
+*/
