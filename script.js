@@ -8,8 +8,9 @@ const myObj={
     "full name":"Gautam Ashok Nimase"
 }
 
-console.log(myObj.name)
-console.log(myObj["name"])
-console.log(myObj[mySym]);
+// console.log(myObj.name)
+// console.log(myObj["name"])
+// console.log(myObj[mySym]);
 
-console.log(myObj)
+// console.log(myObj)
+console.log("hello word")
