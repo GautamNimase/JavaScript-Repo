@@ -35,24 +35,36 @@ switch (month) {
 
 */
 
+/*
 
-const month = "march"
+***** Switch case for Day******
 
-switch (month) {
-    case "jan":
-        console.log("January");
+const Day="Sunday"
+
+switch(Day){
+    case "Monday":
+        console.log("Monday");
         break;
-    case "feb":
-        console.log("feb");
+
+    case "Tuesday":
+        console.log("tuesday");
         break;
-    case "march":
-        console.log("march");
+
+    case "Wednesday":
+        console.log("Wednesday");
         break;
-    case "april":
-        console.log("april");
+
+    case "Thursday":
+        console.log("Thursday");
+        break;
+
+    case "Sunday":
+        console.log("Sunday");
         break;
 
     default:
-        console.log("default case match");
-        break;
+        console.log("day is incorrect")
+        
 }
+
+*/
