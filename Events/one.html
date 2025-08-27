@@ -38,11 +38,13 @@
     // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    //     clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    /*
+    type, timestamp, defaultPrevented
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode
 
+    */
     // document.getElementById('images').addEventListener('click', function (e) {
     //     console.log("clicked inside the ul");
     // }, false)
@@ -59,7 +61,9 @@
     // }, false)
 
 
-    document.querySelector('#images').addEventListener('click', function (e) {
+
+    /*
+        document.querySelector('#images').addEventListener('click', function (e) {
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
@@ -69,8 +73,70 @@
 
 
     })
+    */
 
-    //removeIt.parentNode.removeChild(removeIt)
+
+    /*
+    🟢Event Propagation
+
+    👉 When an event happens (like a click), it doesn’t just stay on that element.
+    -It travels through the DOM tree in two phases:
+    -Capturing Phase (top → target)
+    -Bubbling Phase (target → top)
+
+    🟢 Capturing (Event Capturing)
+    -Event starts from the top/root (document)
+    -Travels down through parent elements
+    -Reaches the target element
+Example: Click on a button → event travels from document → body → div → button.
+
+🟢 Bubbling (Event Bubbling)
+-After reaching the target, event bubbles back up.
+-Travels from child → parent → body → document
+
+*********   Summary  ********* 
+-Event Propagation = how events move through DOM.
+-Capturing = top → down (parent → child).
+-Bubbling = bottom → up (child → parent).
+-By default, JS uses bubbling (third param = false).
+-You can switch to capturing with third param = true.
+
+    */
+
+
+/*
+Event Object Properties
+1. General Info
+->type → The type of event ("click", "keydown", "submit", etc.).
+->timestamp → The time (in ms since page load) when the event occurred.
+->defaultPrevented → Boolean (true/false) → tells if event.preventDefault() was called.
+
+2. Target Elements
+->target → The actual element that triggered the event.
+->toElement → Element the mouse pointer is moving into (used in mouse events).
+->srcElement → Same as target (older IE version).
+->currentTarget → The element whose event listener is currently running (may be different from target during bubbling/capturing).
+
+👉 Example: If you click a <button> inside a <div>:
+
+target → the <button>
+->currentTarget → the <div> (if the handler is attached to <div>)
+
+3. Mouse Coordinates
+->clientX / clientY → Mouse position (X, Y) relative to the browser’s viewport (the visible window).
+->screenX / screenY → Mouse position relative to the whole screen.
+
+👉 Example:
+->clientX = 50 → 50px from left edge of browser window.
+->screenX = 300 → 300px from left edge of the entire monitor screen.
+
+4. Keyboard Info
+->altKey → true if Alt key was pressed.
+->ctrlKey → true if Ctrl key was pressed.
+->shiftKey → true if Shift key was pressed.
+->keyCode → The numeric code for the key pressed (e.g., 65 for "A").
+(⚠️ Deprecated, use event.key instead — gives actual character like "a" or "Enter"->
+*/
 </script>
 
 </html>
